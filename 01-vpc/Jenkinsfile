@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                echo 'Planning....'
+                echo 'Planning.......'
                 sh'''
                     terraform plan
 
