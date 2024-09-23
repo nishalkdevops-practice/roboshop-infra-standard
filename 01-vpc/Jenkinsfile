@@ -7,6 +7,7 @@ pipeline {
             steps {
                 echo 'Initializing......'
                 sh'''
+                    cd 01-vpc
                     ls -ltr
                     pwd
                     terraform init
@@ -20,6 +21,7 @@ pipeline {
             steps {
                 echo 'Planning.......'
                 sh'''
+                    cd 01-vpc
                     ls -ltr
                     pwd
                     terraform plan
@@ -31,6 +33,7 @@ pipeline {
             steps {
                 echo 'Applying....'
                 sh'''
+                    cd 01-vpc
                     ls -ltr
                     pwd
                     terraform apply -auto-approve
