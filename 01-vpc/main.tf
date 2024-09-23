@@ -1,6 +1,8 @@
 #in this module we are developing the script using terraform resources fully secured reoboshop application 
 module "vpc" {
-    source = "../../terraform-aws-vpc-advanced-module"
+    #source = "../../terraform-aws-vpc-advanced-module"
+    source = "git::https://github.com/nishalkdevops-practice/terraform-aws-vpc-advanced-module.git"
+
     cidr_block = var.cidr_block
     project_name = var.project_name
     common_tags =  var.common_tags
