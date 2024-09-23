@@ -31,7 +31,7 @@ pipeline {
                 '''
                 
                 
-                //error 'this is failed'
+                
             }
         }
     }
