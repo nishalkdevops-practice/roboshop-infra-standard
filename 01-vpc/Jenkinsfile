@@ -1,14 +1,17 @@
 pipeline {
     agent { node { label 'Agent -1'}}
 
+    options {
+        ansiColor('xterm')
+    }
+
 
     stages {
         stage('Init') {
             steps {
-                echo 'Initializing......'
+                
                 sh'''
                     cd 01-vpc
-                    
                     ls -ltr
                     pwd
                     terraform init
@@ -20,7 +23,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                echo 'Planning.......'
+                
                 sh'''
                     cd 01-vpc
                     ls -ltr
@@ -32,7 +35,7 @@ pipeline {
         }
         stage('Apply') {
             steps {
-                echo 'Applying....'
+                
                 sh'''
                     cd 01-vpc
                     ls -ltr
