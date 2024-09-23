@@ -25,10 +25,11 @@ pipeline {
             steps {
                 
                 sh'''
-                    cd 01-vpc
                     ls -ltr
                     pwd
+                    cd 01-vpc
                     terraform plan
+
 
                 '''
             }
@@ -37,10 +38,11 @@ pipeline {
             steps {
                 
                 sh'''
-                    cd 01-vpc
                     ls -ltr
                     pwd
+                    cd 01-vpc
                     terraform apply -auto-approve
+
 
                 '''
                 
