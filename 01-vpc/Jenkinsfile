@@ -34,7 +34,30 @@ pipeline {
                 '''
             }
         }
-        stage('destroy') {
+
+        stage('Approve') {
+            steps {
+                input "Shall i apply?"
+          
+            }
+        }
+
+        stage('Apply') {
+            steps {
+                
+                sh'''
+                    ls -ltr
+                    pwd
+                    cd 01-vpc
+                    terraform apply -auto-approve
+
+
+                '''
+            }
+        }
+
+
+/*         stage('destroy') {
             steps {
                 
                 sh'''
@@ -48,9 +71,12 @@ pipeline {
                 
                 
                 
-            }
-        }
+            } 
+    } */
+
+
     }
+
 
     post {
         always {
