@@ -3,8 +3,7 @@ data "aws_vpc" "default" {
 }
 
 data "http" "myip" {
-    url = "http://ipv4.icanhazip.com"
-  
+  url = "http://ipv4.icanhazip.com"
 }
 
 data "aws_ssm_parameter" "vpc_id" {
