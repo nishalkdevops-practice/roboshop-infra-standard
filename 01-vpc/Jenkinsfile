@@ -34,14 +34,14 @@ pipeline {
                 '''
             }
         }
-        stage('Apply') {
+        stage('destroy') {
             steps {
                 
                 sh'''
                     ls -ltr
                     pwd
                     cd 01-vpc
-                    terraform apply -auto-approve
+                    terraform destroy -auto-approve
 
 
                 '''
