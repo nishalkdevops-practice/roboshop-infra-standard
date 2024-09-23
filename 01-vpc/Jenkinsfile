@@ -8,6 +8,7 @@ pipeline {
                 echo 'Initializing......'
                 sh'''
                     cd 01-vpc
+                    
                     ls -ltr
                     pwd
                     terraform init
